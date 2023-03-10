@@ -5,7 +5,9 @@ import time
 link = "http://suninjuly.github.io/simple_form_find_task.html"
 
 try:
-    browser = webdriver.Chrome()
+    chromeOptions = webdriver.ChromeOptions()
+    chromeOptions.add_argument("--no-sandbox")
+    browser = webdriver.Chrome('driver/chromedriver', chrome_options=chromeOptions)
     browser.get(link)
 
     input1 = browser.find_element(By.TAG_NAME, 'input')
