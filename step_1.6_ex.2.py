@@ -3,13 +3,16 @@ from selenium.webdriver.common.by import By
 import time
 import math
 
-link = "http://suninjuly.github.io/simple_form_find_task.html"
+link = "http://suninjuly.github.io/find_link_text"
 
 try:
     chromeOptions = webdriver.ChromeOptions()
     chromeOptions.add_argument("--no-sandbox")
     browser = webdriver.Chrome('driver/chromedriver', chrome_options=chromeOptions)
     browser.get(link)
+
+    link = browser.find_element(By.LINK_TEXT, str(math.ceil(math.pow(math.pi, math.e)*10000)))
+    link.click()
 
     input1 = browser.find_element(By.TAG_NAME, 'input')
     input1.send_keys("Ivan")
