@@ -19,6 +19,7 @@ try:
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
 
+
 finally:
     # успеваем скопировать код за 30 секунд
     time.sleep(30)
