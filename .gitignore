@@ -3,3 +3,4 @@ venv
 test.txt
 test_function.py
 /geckodriver.log
+__pycache__
